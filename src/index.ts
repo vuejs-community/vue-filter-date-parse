@@ -8,12 +8,12 @@ const parse = (input: string, format: string, key: string): string => {
   return input.slice(index, index + key.length);
 };
 
-export const dateParse = (input: string, format: string = 'YYYY-MM-DD HH.mm.ss'): Date => {
-  let year = 2000;
+export const dateParse = (input: string, format: string = 'YYYY-MM-DD HH.mm.ss', { epoch = 2000 } = {}): Date => {
+  let year = epoch;
   if (input.includes('YYYY')) {
     year = parseInt(parse(input, format, 'YYYY'), 10);
   } else if (input.includes('YY')) {
-    year = parseInt(parse(input, format, 'YY'), 10) + 2000;
+    year = parseInt(parse(input, format, 'YY'), 10) + epoch;
   }
 
   let month = 0;

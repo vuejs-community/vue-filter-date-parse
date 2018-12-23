@@ -25,6 +25,14 @@ Using with [dateFormat filter](https://github.com/ednikolenko/vue-filter-date-fo
 </template>
 ```
 
+or
+
+```html
+<template>
+  <div>{{ '15.05.67' | dateParse('DD.MM.YYYY', { epoch: 1900 }) | dateFormat('YYYY-MM-DD') }}</div>
+</template>
+```
+
 render as:
 
 ```html
