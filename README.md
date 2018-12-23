@@ -2,6 +2,7 @@
 Simple date parsing filter for Vue.js
 
 [![NPM Version](https://img.shields.io/npm/v/vue-filter-date-parse.svg)](https://www.npmjs.com/package/vue-filter-date-parse)
+[![License](https://img.shields.io/npm/l/vue-filter-date-parse.svg)](/LICENSE)
 [![Dependencies](https://david-dm.org/eduardnikolenko/vue-filter-date-parse.svg)](https://david-dm.org/eduardnikolenko/vue-filter-date-parse)
 [![Dev Dependencies](https://david-dm.org/eduardnikolenko/vue-filter-date-parse/dev-status.svg)](https://david-dm.org/eduardnikolenko/vue-filter-date-parse/?type=dev)
 [![Peer Dependencies](https://david-dm.org/eduardnikolenko/vue-filter-date-parse/peer-status.svg)](https://david-dm.org/eduardnikolenko/vue-filter-date-parse?type=peer)
