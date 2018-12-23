@@ -30,6 +30,14 @@ Using with [dateFormat filter](https://github.com/eduardnikolenko/vue-filter-dat
 </template>
 ```
 
+or
+
+```html
+<template>
+  <div>{{ '10.10.89' | dateParse('DD.MM.YYYY', { epoch: 1900 }) | dateFormat('YYYY.MM.DD') }}</div>
+</template>
+```
+
 render as:
 
 ```html
