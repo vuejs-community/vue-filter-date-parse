@@ -1,12 +1,12 @@
 import { VueConstructor } from 'vue';
 import { version } from '../package.json';
-import { dateParseFilter } from './filters/dateParse';
+import { dateParse } from './filters/dateParse';
 
-export { dateParseFilter } from './filters/dateParse';
+export { dateParse } from './filters/dateParse';
 
 export default {
   install(Vue: VueConstructor): void {
-    Vue.filter('dateParse', dateParseFilter);
+    Vue.filter('dateParse', dateParse);
   },
   version
 };

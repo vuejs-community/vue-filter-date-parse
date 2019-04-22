@@ -4,7 +4,7 @@ const parse = (input: string, format: string, key: string): string => {
   return input.slice(index, index + key.length);
 };
 
-export const dateParseFilter = (input: string, format: string = 'YYYY-MM-DD HH.mm.ss', { epoch = 2000 } = {}): Date => {
+export const dateParse = (input: string, format: string = 'YYYY-MM-DD HH.mm.ss', { epoch = 2000 } = {}): Date => {
   let year = 2000;
   if (input.includes('YYYY')) {
     year = parseInt(parse(input, format, 'YYYY'), 10);
