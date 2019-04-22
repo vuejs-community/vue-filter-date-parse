@@ -6,7 +6,7 @@
     "vue-filter"
   ],
   "license": "MIT",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "author": "Eduard Nikolenko <info@eduardnikolenko.com>",
   "repository": {
     "type": "git",
@@ -25,12 +25,12 @@
     "lint": "tslint -p tsconfig.json -c tslint.json"
   },
   "devDependencies": {
-    "rollup": "^0.68.2",
-    "rollup-plugin-json": "^3.1.0",
-    "rollup-plugin-typescript": "^1.0.0",
-    "tslint": "^5.12.0",
-    "typescript": "^3.2.2",
-    "vue": "^2.5.21"
+    "rollup": "^1.10.1",
+    "rollup-plugin-json": "^4.0.0",
+    "rollup-plugin-typescript": "^1.0.1",
+    "tslint": "^5.16.0",
+    "typescript": "^3.4.4",
+    "vue": "^2.6.10"
   },
   "peerDependencies": {
     "vue": "^2.0.0"
