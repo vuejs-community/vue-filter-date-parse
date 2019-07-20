@@ -26,7 +26,7 @@ Using with [dateFormat filter](https://github.com/eduardnikolenko/vue-filter-dat
 
 ```html
 <template>
-  <div>{{ '10.10.1989' | dateParse('DD.MM.YYYY') | dateFormat('YYYY.MM.DD') }}</div>
+  <div>{{ '10.10.1989' | dateParse('DD.MM.YYYY') | dateFormat('YYYY-MM-DD') }}</div>
 </template>
 ```
 
@@ -34,7 +34,7 @@ or
 
 ```html
 <template>
-  <div>{{ '10.10.89' | dateParse('DD.MM.YY', { epoch: 1900 }) | dateFormat('YYYY.MM.DD') }}</div>
+  <div>{{ '10.10.89' | dateParse('DD.MM.YY', { epoch: 1900 }) | dateFormat('YYYY-MM-DD') }}</div>
 </template>
 ```
 
