@@ -10,15 +10,15 @@ on:
 
 jobs:
   build:
-    name: Run on ${{ matrix.os }} with Node.js ${{ matrix.node }}
-    runs-on: ${{ matrix.os }}-latest
+    name: Run on Ubuntu 18.04 with Node.js 12
+    runs-on: ubuntu-18.04
     steps:
       - name: Checkout
         uses: actions/checkout@v1
       - name: Setup Node.js
         uses: actions/setup-node@v1
         with:
-          version: ${{ matrix.node }}
+          version: 12
       - name: Install dependencies
         run: npm ci
       - name: Build
@@ -27,25 +27,3 @@ jobs:
         run: npm run lint
       - name: Test
         run: npm test
-    strategy:
-      matrix:
-        node: [10, 12]
-        os: [macOS, Ubuntu, Windows]
-
-  publish:
-    name: Publish
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v1
-      - name: Setup Node.js
-        uses: actions/setup-node@v1
-        with:
-          version: 12
-          registry-url: https://npm.pkg.github.com/
-      - name: Publish
-        if: github.event == 'push'
-        run: npm publish
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets. NPM_AUTH_TOKEN }}
