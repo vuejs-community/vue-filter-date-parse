@@ -29,7 +29,7 @@ or
 
 ```html
 <template>
-  <div>{{ '15.05.67' | dateParse('DD.MM.YYYY', { epoch: 1900 }) | dateFormat('YYYY-MM-DD') }}</div>
+  <div>{{ '15.05.67' | dateParse('DD.MM.YY', { epoch: 1900 }) | dateFormat('YYYY-MM-DD') }}</div>
 </template>
 ```
 
