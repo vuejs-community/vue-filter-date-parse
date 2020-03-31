@@ -1,23 +1,23 @@
-# vue-filter-date-parse
+# @vuejs-community/vue-filter-date-parse
 Simple date parsing filter for Vue.js
 
 ## Installation
 
 install from npm
 ```bash
-$ npm install vue-filter-date-parse
+$ npm install @vuejs-community/vue-filter-date-parse
 ```
 and register in you Vue app
 ```js
 import Vue from 'vue';
-import VueFilterDateParse from 'vue-filter-date-parse';
+import VueFilterDateParse from '@vuejs-community/vue-filter-date-parse';
 
 Vue.use(VueFilterDateParse);
 ```
 
 ## Usage
 
-Using with [dateFormat filter](https://github.com/ednikolenko/vue-filter-date-format):
+Using with [dateFormat filter](https://github.com/vuejs-community/vue-filter-date-format):
 
 ```html
 <template>
@@ -55,4 +55,4 @@ Default format is `YYYY-MM-DD HH:mm:ss`
 
 ## License
 
-MIT © [Ed Nikolenko](https://github.com/ednikolenko)
+MIT © [Vue.js Community](https://github.com/vuejs-community)
