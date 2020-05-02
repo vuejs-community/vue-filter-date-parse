@@ -1,10 +1,14 @@
-const parse = (input: string, format: string, key: string): string => {
+import { VueConstructor } from 'vue';
+
+import { version } from '../package.json';
+
+function parse(input: string, format: string, key: string): string {
   const index = format.indexOf(key);
 
   return input.slice(index, index + key.length);
-};
+}
 
-export const dateParse = (input: string, format: string = 'YYYY-MM-DD HH.mm.ss', { epoch = 2000 } = {}): Date => {
+export function dateParse(input: string, format: string = 'YYYY-MM-DD HH.mm.ss', { epoch = 2000 } = {}): Date {
   let year = 2000;
   if (format.includes('YYYY')) {
     year = parseInt(parse(input, format, 'YYYY'), 10);
@@ -38,4 +42,11 @@ export const dateParse = (input: string, format: string = 'YYYY-MM-DD HH.mm.ss',
   }
 
   return new Date(year, month, date, hours, minutes, seconds);
+}
+
+export default {
+  install(Vue: VueConstructor): void {
+    Vue.filter('dateParse', dateParse);
+  },
+  version
 };
