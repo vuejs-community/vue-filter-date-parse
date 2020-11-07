@@ -15,6 +15,13 @@ export default {
       file: 'dist/vue-filter-date-parse.cjs.js',
       format: 'commonjs',
       sourcemap: true
+    },
+    {
+      exports: 'named',
+      file: 'dist/vue-filter-date-parse.umd.js',
+      format: 'umd',
+      name: 'VueFilterDateFormat',
+      sourcemap: true
     }
   ],
   plugins: [

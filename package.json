@@ -16,7 +16,9 @@
     "dist/vue-filter-date-parse.cjs.d.ts",
     "dist/vue-filter-date-parse.cjs.js",
     "dist/vue-filter-date-parse.esm.d.ts",
-    "dist/vue-filter-date-parse.esm.js"
+    "dist/vue-filter-date-parse.esm.js",
+    "dist/vue-filter-date-parse.umd.d.ts",
+    "dist/vue-filter-date-parse.umd.js"
   ],
   "main": "dist/vue-filter-date-parse.cjs.js",
   "module": "dist/vue-filter-date-parse.esm.js",
