@@ -1,6 +1,6 @@
-import { VueConstructor } from 'vue';
-
-import { version } from '../package.json';
+type VueConstructor = {
+  filter(id: string, definition?: Function): Function;
+};
 
 const parse = (input: string, format: string, key: string): string => {
   const index = format.indexOf(key);
@@ -47,6 +47,5 @@ export const dateParse = (input: string, format: string = 'YYYY-MM-DD HH.mm.ss',
 export default {
   install(Vue: VueConstructor): void {
     Vue.filter('dateParse', dateParse);
-  },
-  version
+  }
 };
